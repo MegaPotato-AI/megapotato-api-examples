@@ -1,0 +1,10 @@
+# Results the scripts save next to your photos
+*_x1.*
+*_x2.*
+*_x4.*
+*_x8.*
+
+.env
+.venv/
+__pycache__/
+node_modules/

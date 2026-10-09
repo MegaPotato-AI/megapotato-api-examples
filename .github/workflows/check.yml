@@ -1,0 +1,18 @@
+name: check
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Shell scripts
+        run: shellcheck *.sh
+      - name: Python
+        run: pipx run ruff check .
+      - name: Node.js
+        run: node --check upscale.mjs
