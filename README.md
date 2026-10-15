@@ -9,6 +9,18 @@ In [the October 2026 blind benchmark of 18 AI upscalers](https://megapotato.app/
 
 Full reference: **[megapotato.app/developers](https://megapotato.app/developers)**
 
+## Try it without a key
+
+The keyless trial runs one real job on the same model inside a small hourly budget, nothing charged:
+
+```sh
+curl https://megapotato.app/v1/try -F file=@photo.jpg -F upscale=4
+curl "https://megapotato.app/v1/try/<id>?wait=55"
+```
+
+A `403` means the trial is closed and a `429` that a budget is used up (wait for `Retry-After`); the
+current budget is on [megapotato.app/developers#try](https://megapotato.app/developers#try).
+
 ## Get a key
 
 1. Sign in at [megapotato.app](https://megapotato.app) and open the
@@ -16,8 +28,10 @@ Full reference: **[megapotato.app/developers](https://megapotato.app/developers)
 2. Create a **test key** (`mp_test_…`) to try the whole flow for free. Uploads are checked and priced
    exactly like real ones, but nothing runs and nothing is charged: every job comes back completed
    with a sample picture.
-3. Live keys (`mp_live_…`) unlock with your first chip pack. They draw on the same chip balance as
-   the website.
+3. Live keys (`mp_live_…`) are created on the same page and draw on the same chip balance as the
+   website. New accounts start with free chips; whether every signed-in account gets a live key at
+   once or it unlocks with the first chip pack is stated live on
+   [megapotato.app/developers#test-keys](https://megapotato.app/developers#test-keys).
 
 ```sh
 export MEGAPOTATO_API_KEY=mp_test_...
