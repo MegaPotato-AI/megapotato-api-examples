@@ -4,6 +4,9 @@ Ready-to-run scripts for the [MegaPotato AI image upscaler](https://megapotato.a
 and get it back 2×, 4× or 8× larger, up to 16 400 px on the long side, or sharpened at its original
 size. The API runs the same models at the same prices as the website.
 
+In [the October 2026 blind benchmark of 18 AI upscalers](https://megapotato.app/blog/best-ai-image-upscalers-2026)
+(open data, CC BY 4.0) the model came first and is the cheapest of the leaders.
+
 Full reference: **[megapotato.app/developers](https://megapotato.app/developers)**
 
 ## Get a key
