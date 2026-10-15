@@ -1,6 +1,6 @@
-# MegaPotato API examples
+# MegaPotato AI image upscaler API: examples
 
-Ready-to-run scripts for the [MegaPotato](https://megapotato.app) image upscaling API. Send a photo
+Ready-to-run scripts for the [MegaPotato AI image upscaler](https://megapotato.app) and its image upscaling (super-resolution) API. Send a photo
 and get it back 2×, 4× or 8× larger, up to 16 400 px on the long side, or sharpened at its original
 size. The API runs the same models at the same prices as the website.
 

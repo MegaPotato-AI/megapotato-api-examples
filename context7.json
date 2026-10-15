@@ -1,0 +1,12 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "MegaPotato AI image upscaler API: examples (image upscaling, super-resolution)",
+  "description": "Ready-to-run examples for the MegaPotato image upscaling API (megapotato.app): upscale a photo ×2, ×4 or ×8 with super-resolution from curl, Python or Node.js. Submit a photo, poll the job, download the result. Pay per photo, free test keys. Full docs: megapotato.app/developers, OpenAPI: megapotato.app/developers/openapi.json.",
+  "rules": [
+    "Send an Idempotency-Key header with every POST /v1/upscale and reuse it on retries: the same key returns the same job and charges once.",
+    "Poll GET /v1/jobs/{id}?wait=55 instead of polling every second; the server holds the request until the job finishes or 55 s pass.",
+    "Download result_url with a plain GET and no Authorization header; the link is valid for about an hour, re-read the job for a fresh one.",
+    "Price a photo first with POST /v1/quote (free); a job that fails is refunded automatically.",
+    "Keep the API key on your server, never in a web page, a mobile app or a repository; a test key (mp_test_…) exercises the whole flow without charging."
+  ]
+}
