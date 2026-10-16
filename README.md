@@ -18,6 +18,7 @@ curl https://megapotato.app/v1/try -F file=@photo.jpg -F upscale=4
 curl "https://megapotato.app/v1/try/<id>?wait=55"
 ```
 
+Trial jobs queue behind every keyed job, so they can wait longer when the service is busy.
 A `403` means the trial is closed and a `429` that a budget is used up (wait for `Retry-After`); the
 current budget is on [megapotato.app/developers#try](https://megapotato.app/developers#try).
 

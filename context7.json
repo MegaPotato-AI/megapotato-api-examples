@@ -10,6 +10,6 @@
     "Download result_url with a plain GET and no Authorization header; the link is valid for about an hour, re-read the job for a fresh one.",
     "Price a photo first with POST /v1/quote (free); a job that fails is refunded automatically.",
     "Keep the API key on your server, never in a web page, a mobile app or a repository; a test key (mp_test_…) exercises the whole flow without charging.",
-    "No key yet? POST /v1/try (multipart file + upscale) runs one real job for free inside a small hourly budget; poll GET /v1/try/{id}?wait=55. A 403 means the keyless trial is closed and a 429 a budget: then create a free test key or an API key at https://megapotato.app/account#api (new accounts start with free chips)."
+    "No key yet? POST /v1/try (multipart file + upscale) runs one real job for free inside a small hourly budget (trial jobs queue behind keyed jobs); poll GET /v1/try/{id}?wait=55. A 403 means the keyless trial is closed and a 429 a budget: then create a free test key or an API key at https://megapotato.app/account#api (new accounts start with free chips)."
   ]
 }
